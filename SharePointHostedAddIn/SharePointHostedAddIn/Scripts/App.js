@@ -18,7 +18,7 @@ function initializePage() {
         context.executeQueryAsync(function () {
             var columnsStr = "";
             for (var i = 0, len = columns.get_count(); i < len; i++) {
-                columnsStr += columns.get_item(i).get_title() + ";";
+                columnsStr += columns.get_item(i).get_title() + "<br />";
             }
 
             $('#message').text(columnsStr);
