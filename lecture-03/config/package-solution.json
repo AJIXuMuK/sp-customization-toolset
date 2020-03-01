@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "it-ticket-submission-form-client-side-solution",
+    "id": "13dff08c-f9a5-4b60-8d3d-932cd4d8c7f4",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/it-ticket-submission-form.sppkg"
+  }
+}
