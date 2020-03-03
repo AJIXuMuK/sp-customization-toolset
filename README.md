@@ -5,3 +5,4 @@ Repository for samples and demos from SharePoint Online Customization Toolset co
 
 * lecture-02 - SharePoint Add-ins
 * lecture-03 - SharePoint Framework
+* lecture-04 - SharePoint REST API
