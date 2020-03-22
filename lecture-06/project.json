@@ -1,0 +1,10 @@
+{
+    "frameworks": {
+        "net46": {
+            "dependencies": {
+             "Microsoft.SharePointOnline.CSOM": "16.1.19814.12000",
+            "Newtonsoft.Json": "12.0.3"   
+            }
+        }
+    }
+}
