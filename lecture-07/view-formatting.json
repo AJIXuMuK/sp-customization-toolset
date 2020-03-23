@@ -37,6 +37,9 @@
       },
       {
         "elmType": "div",
+        "style": {
+          "width": "100px"
+        },
         "children": [
           {
             "elmType": "div",
