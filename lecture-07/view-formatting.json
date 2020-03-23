@@ -1,0 +1,57 @@
+{
+  "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
+  "hideSelection": true,
+  "hideColumnHeader": true,
+  "rowFormatter": {
+    "elmType": "div",
+    "attributes": {
+      "class": "sp-row-card"
+    },
+    "style": {
+      "display": "flex",
+      "flex-direction": "row",
+      "justify-content": "space-between"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "style": {
+          "text-align": "left"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-row-title"
+            },
+            "txtContent": "[$Title]"
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-row-listPadding"
+            },
+            "txtContent": "[$Details]"
+          }
+        ]
+      },
+      {
+        "elmType": "div",
+        "children": [
+          {
+            "elmType": "div",
+            "txtContent": "Status:",
+            "style": {
+              "font-weight": "700",
+              "margin-right": "3px"
+            }
+          },
+          {
+            "elmType": "div",
+            "txtContent": "[$Status]"
+          }
+        ]
+      }
+    ]
+  }
+}

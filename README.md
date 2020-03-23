@@ -8,3 +8,4 @@ Repository for samples and demos from SharePoint Online Customization Toolset co
 * lecture-04 - SharePoint REST API
 * lecture-05 - Microsoft Graph
 * lecture-06 - SharePoint Webhooks
+* lecture-07 - Column (View) Formatting
