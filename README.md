@@ -9,3 +9,4 @@ Repository for samples and demos from SharePoint Online Customization Toolset co
 * lecture-05 - Microsoft Graph
 * lecture-06 - SharePoint Webhooks
 * lecture-07 - Column (View) Formatting
+* lecture-08 - Site Designs and Site Scripts

@@ -1,0 +1,128 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
+  "actions": [
+    {
+      "verb": "createSPList",
+      "templateType": 100,
+      "listName": "IT Requests",
+      "subactions": [
+        {
+          "verb": "addSPField",
+          "fieldType": "Note",
+          "displayName": "Details",
+          "addToDefaultView": true,
+          "isRequired": false
+        },
+        {
+          "verb": "addSPFieldXml",
+          "schemaXml": "<Field DisplayName=\"Priority\" FillInChoice=\"FALSE\" Format=\"Dropdown\" Name=\"Priority\" Title=\"Priority\" Type=\"Choice\" ID=\"{2b3a75f1-97c2-4492-9ddd-5cfff6eb2ad4}\" SourceID=\"{03afa985-19f6-4556-9684-00844c514b51}\" StaticName=\"Priority\" ColName=\"nvarchar4\" RowOrdinal=\"0\"><CHOICES><CHOICE>Low</CHOICE><CHOICE>Medium</CHOICE><CHOICE>High</CHOICE></CHOICES><Default>Low</Default></Field>",
+          "addToDefaultView": true
+        },
+        {
+          "verb": "addSPField",
+          "fieldType": "User",
+          "displayName": "Assigned To",
+          "isRequired": false,
+          "addToDefaultView": true
+        },
+        {
+          "verb": "addSPFieldXml",
+          "schemaXml": "<Field DisplayName=\"Status\" FillInChoice=\"FALSE\" Format=\"Dropdown\" Name=\"Status\" Title=\"Status\" Type=\"Choice\" ID=\"{94c93e00-5d33-4a38-b95b-b3c9d45612ec}\" SourceID=\"{03afa985-19f6-4556-9684-00844c514b51}\" StaticName=\"Status\" ColName=\"nvarchar5\" RowOrdinal=\"0\"><CHOICES><CHOICE>Open</CHOICE><CHOICE>In Progress</CHOICE><CHOICE>Resolved</CHOICE><CHOICE>Closed</CHOICE></CHOICES><Default>Open</Default></Field>",
+          "addToDefaultView": true
+        },
+        {
+          "verb": "setSPFieldCustomFormatter",
+          "fieldDisplayName": "Assigned To",
+          "formatterJSON": {
+            "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+            "elmType": "div",
+            "txtContent": "@currentField.title",
+            "attributes": {
+              "class": "=if(@currentField == '', 'sp-field-severity--warning', '')"
+            },
+            "style": {
+              "position": "absolute",
+              "left": "0",
+              "top": "0",
+              "right": "0",
+              "bottom": "0"
+            }
+          }
+        },
+        {
+          "verb": "addSPView",
+          "name": "My Requests",
+          "query": "<Where><Eq><FieldRef Name=\"Author\" /><Value Type=\"Integer\"><UserID Type=\"Integer\" /></Value></Eq></Where>",
+          "viewFields": [
+            "LinkTitle",
+            "Details",
+            "Priority",
+            "Status"
+          ],
+          "rowLimit": 30,
+          "isPaged": true,
+          "formatterJSON": {
+            "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
+            "hideSelection": true,
+            "hideColumnHeader": true,
+            "rowFormatter": {
+              "elmType": "div",
+              "attributes": {
+                "class": "sp-row-card"
+              },
+              "style": {
+                "display": "flex",
+                "flex-direction": "row",
+                "justify-content": "space-between"
+              },
+              "children": [
+                {
+                  "elmType": "div",
+                  "style": {
+                    "text-align": "left"
+                  },
+                  "children": [
+                    {
+                      "elmType": "div",
+                      "attributes": {
+                        "class": "sp-row-title"
+                      },
+                      "txtContent": "[$Title]"
+                    },
+                    {
+                      "elmType": "div",
+                      "attributes": {
+                        "class": "sp-row-listPadding"
+                      },
+                      "txtContent": "[$Details]"
+                    }
+                  ]
+                },
+                {
+                  "elmType": "div",
+                  "style": {
+                    "width": "100px"
+                  },
+                  "children": [
+                    {
+                      "elmType": "div",
+                      "txtContent": "Status:",
+                      "style": {
+                        "font-weight": "700",
+                        "margin-right": "3px"
+                      }
+                    },
+                    {
+                      "elmType": "div",
+                      "txtContent": "[$Status]"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
