@@ -10,3 +10,4 @@ Repository for samples and demos from SharePoint Online Customization Toolset co
 * lecture-06 - SharePoint Webhooks
 * lecture-07 - Column (View) Formatting
 * lecture-08 - Site Designs and Site Scripts
+* lecture-11 - Microsoft 365 PnP

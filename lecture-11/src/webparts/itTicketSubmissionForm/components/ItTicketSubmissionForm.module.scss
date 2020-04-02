@@ -1,0 +1,12 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+.itTicketSubmissionForm {
+  margin: 15px;
+
+  .buttons {
+    margin-top: 10px;
+    .button {
+      margin-right: 10px;
+    }
+  }
+}
