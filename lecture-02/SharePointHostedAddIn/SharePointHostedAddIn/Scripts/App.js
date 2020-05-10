@@ -21,7 +21,7 @@ function initializePage() {
                 columnsStr += columns.get_item(i).get_title() + "<br />";
             }
 
-            $('#message').text(columnsStr);
+            $('#message').html(columnsStr);
         }, function (sender, args) {
             alert('Failed to get columns. Error:' + args.get_message());
         });

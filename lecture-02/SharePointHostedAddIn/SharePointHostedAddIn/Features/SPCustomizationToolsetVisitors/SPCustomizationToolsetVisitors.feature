@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<feature xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="a369098a-6735-467e-a0a9-8365653d8440" description="SP Customization Toolset Visitors" featureId="a369098a-6735-467e-a0a9-8365653d8440" imageUrl="" solutionId="00000000-0000-0000-0000-000000000000" title="SP Customization Toolset Visitors" version="" deploymentPath="$SharePoint.Project.FileNameWithoutExtension$_$SharePoint.Feature.FileNameWithoutExtension$" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/FeatureModel">
+<feature xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="a369098a-6735-467e-a0a9-8365653d8440" description="SharePoint Add-in Feature" featureId="a369098a-6735-467e-a0a9-8365653d8440" imageUrl="" solutionId="00000000-0000-0000-0000-000000000000" title="SP Customization Toolset Visitors" version="" deploymentPath="$SharePoint.Project.FileNameWithoutExtension$_$SharePoint.Feature.FileNameWithoutExtension$" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/FeatureModel">
   <projectItems>
     <projectItemReference itemId="aec11056-3978-4a3a-aedf-432ab0ba9063" />
     <projectItemReference itemId="20c17af0-a31b-43e9-a728-e5393026ca58" />
